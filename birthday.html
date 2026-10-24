@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Special Day</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="birthday.css">
+</head>
+
+<body>
+
+  <main class="page-wrapper">
+
+    <section class="paper">
+
+      <!-- DEKORASI -->
+      <div class="decor decor-top"></div>
+      <div class="decor decor-bottom"></div>
+
+
+      <!-- HEADER -->
+      <header class="header">
+
+        <p class="eyebrow">
+          Hari ini adalah
+        </p>
+
+        <h1>
+          Hari
+          <span>Spesialmu</span>
+        </h1>
+
+      </header>
+
+
+      <!-- =========================
+           KALENDER
+      ========================== -->
+
+      <section id="calendar" class="calendar-section">
+
+        <h2>
+          OCTOBER 2026
+        </h2>
+
+        <div class="weekdays">
+          <span>M</span>
+          <span>T</span>
+          <span>W</span>
+          <span>T</span>
+          <span>F</span>
+          <span>S</span>
+          <span>S</span>
+        </div>
+
+        <div class="days">
+
+          <!-- September -->
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <!-- October -->
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span>10</span>
+
+          <span>11</span>
+          <span>12</span>
+          <span>13</span>
+          <span>14</span>
+          <span>15</span>
+          <span>16</span>
+
+          <!-- BIRTHDAY -->
+          <span class="birthday-date">
+            17
+          </span>
+
+          <span>18</span>
+          <span>19</span>
+          <span>20</span>
+          <span>21</span>
+          <span>22</span>
+          <span>23</span>
+          <span>24</span>
+
+          <span>25</span>
+          <span>26</span>
+          <span>27</span>
+          <span>28</span>
+          <span>29</span>
+          <span>30</span>
+          <span>31</span>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           AMPlOP
+      ========================== -->
+
+      <section id="letter" class="letter-section">
+
+        <div class="envelope-container">
+
+          <div class="envelope">
+
+            <!-- KERTAS -->
+            <div class="letter-paper">
+
+              <p class="letter-label">
+                A LITTLE LETTER
+              </p>
+
+              <div id="typedText"></div>
+
+            </div>
+
+
+            <!-- BAGIAN BELAKANG AMPLOP -->
+            <div class="envelope-back"></div>
+
+
+            <!-- FLAP AMPLOP -->
+            <div class="envelope-flap"></div>
+
+
+            <!-- BAGIAN DEPAN -->
+            <div class="envelope-front"></div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           NEXT
+      ========================== -->
+
+      <div id="nextButton" class="next-wrapper">
+
+        <button id="viewLetterButton" type="button">
+          LIHAT ISI SURAT
+        </button>
+
+        <a href="memories.html">
+          NEXT
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <dialog id="fullLetterDialog" class="full-letter-dialog" aria-labelledby="fullLetterTitle">
+    <div class="full-letter-header">
+      <p id="fullLetterTitle" class="letter-label">A LITTLE LETTER</p>
+      <button id="closeLetterButton" class="close-letter-button" type="button" aria-label="Tutup surat">
+        &times;
+      </button>
+    </div>
+    <div id="fullLetterText"></div>
+  </dialog>
+
+  <script src="birthday.js"></script>
+
+</body>
+</html>

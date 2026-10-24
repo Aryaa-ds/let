@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Happy Birthday Sayang</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      .paper {
+        background-color: #f3f1ec;
+        background-image: repeating-linear-gradient(
+          0deg,
+          rgba(40, 55, 65, 0.025) 0px,
+          rgba(40, 55, 65, 0.025) 1px,
+          transparent 1px,
+          transparent 4px
+        );
+      }
+
+      .fade-out {
+        animation: fadeOut 0.7s ease forwards;
+      }
+      @keyframes envelope-shake {
+  0%, 70%, 100% {
+    transform: rotate(-2deg) translateX(0);
+  }
+
+  75% {
+    transform: rotate(2deg) translateX(-3px);
+  }
+
+  80% {
+    transform: rotate(-3deg) translateX(3px);
+  }
+
+  85% {
+    transform: rotate(2deg) translateX(-2px);
+  }
+
+  90% {
+    transform: rotate(-2deg) translateX(1px);
+  }
+}
+
+.envelope {
+  animation: envelope-shake 1.5s ease-in-out infinite;
+}
+
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          transform: scale(1.03);
+        }
+        
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#b8c2c7]">
+    <main
+      id="cover"
+      class="min-h-screen max-w-[430px] mx-auto p-3 flex items-center"
+    >
+      <section
+        class="paper relative w-full min-h-[calc(100vh-24px)] overflow-hidden border border-[#526d82]/15 shadow-[0_20px_50px_rgba(40,55,65,0.20)] flex flex-col items-center justify-center text-center"
+      >
+        <!-- dekorasi -->
+        <div
+          class="absolute -top-20 -left-20 w-40 h-40 rounded-full border border-[#526d82]/20"
+        ></div>
+
+        <div
+          class="absolute -bottom-20 -right-20 w-40 h-40 rounded-full border border-[#526d82]/20"
+        ></div>
+
+        <!-- small text -->
+        
+
+        <!-- title -->
+        <h1 class="text-[#293b49] text-[40px] leading-[1.05] font-normal">
+          Happy Birthday
+
+          <span class="block mt-2 text-[#61798a] text-[48px] italic">
+            Sayang
+          </span>
+        </h1>
+
+        <!-- envelope -->
+        <div
+          class="envelope relative mt-12 w-[145px] border border-[#61798a] rotate-[-2deg] shadow-[7px_9px_0_rgba(97,121,138,0.12)]"
+        >
+          <img src="envelope.jpeg" alt="Envelope">
+        </div>
+        <p class="font-sans text-[9px] tracking-[0.35em] text-[#61798a] mt-6">
+          17 - 10 - 2026
+        </p>
+        <!-- button -->
+        <button
+          onclick="openInvitation()"
+          class=" mt-4 px-10 py-3 bg-[#293b49] text-white font-sans text-[10px] tracking-[0.3em] transition duration-300 hover:bg-[#526d82] hover:-translate-y-0.5 active:scale-95"
+        >
+          OPEN
+        </button>
+      </section>
+    </main>
+
+    <script>
+      function openInvitation() {
+        const cover = document.getElementById("cover");
+
+        cover.classList.add("fade-out");
+
+        setTimeout(() => {
+          // nanti diganti ke halaman Birthday Wish
+          window.location.href = "birthday.html";
+        }, 700);
+      }
+    </script>
+  </body>
+</html>
